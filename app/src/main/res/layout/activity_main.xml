@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FAFAFA">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SmartRetail POS"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#111111" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Pertemuan 12: Debugging Interaktif &amp; Timber Logging"
+        android:textSize="14sp"
+        android:textColor="#777777" />
+
+    <EditText
+        android:id="@+id/etNominal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="Harga Satuan (Contoh: 15000)"
+        android:inputType="numberDecimal"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/etQty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Kuantitas Barang (Contoh: 2)"
+        android:inputType="number"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnHitung"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:text="Hitung Subtotal (Uji Breakpoint &amp; Timber)"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2962FF" />
+
+    <TextView
+        android:id="@+id/tvHasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Total Transaksi: Rp 0,00"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#222222" />
+
+    <Button
+        android:id="@+id/btnLanjut"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:text="Lanjut ke Smart POS"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#008577" />
+
+</LinearLayout>

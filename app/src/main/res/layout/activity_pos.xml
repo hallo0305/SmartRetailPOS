@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smart POS Terminal Kasir"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#0F172A" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simulasi Transaksi Pembayaran Kasir Berketahanan Tinggi"
+            android:textSize="13sp"
+            android:textColor="#64748B"
+            android:layout_marginBottom="20dp" />
+
+        <EditText
+            android:id="@+id/etBarcode"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Pindai / Masukkan Barcode (Cth: 8991201)"
+            android:background="@android:drawable/editbox_background"
+            android:paddingHorizontal="12dp"
+            android:textSize="14sp" />
+
+        <!-- INPUT TOTAL TRANSAKSI -->
+        <EditText
+            android:id="@+id/etTotal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:hint="Total Transaksi (contoh: 500000)"
+            android:inputType="numberDecimal"
+            android:background="@android:drawable/editbox_background"
+            android:paddingHorizontal="12dp"
+            android:textSize="14sp" />
+
+        <RadioGroup
+            android:id="@+id/rgSimulation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <RadioButton
+                android:id="@+id/rbSuccess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Simulasi Transaksi Normal (Berhasil)"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbBarcodeError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Simulasi Error 404 (Barcode Tidak Ditemukan)" />
+
+            <RadioButton
+                android:id="@+id/rbNetworkTimeout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Simulasi Error Jaringan (Payment Timeout)" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnProcessPayment"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Proses Pembayaran Transaksi"
+            android:backgroundTint="#0D9488"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp" />
+
+        <ProgressBar
+            android:id="@+id/pbPosLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:visibility="gone" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPosResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            app:cardCornerRadius="10dp"
+            app:strokeColor="#CBD5E1"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvPosStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TRANSAKSI BERHASIL"
+                    android:textStyle="bold"
+                    android:textColor="#16A34A" />
+
+                <TextView
+                    android:id="@+id/tvPosDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Detail transaksi akan tampil di sini..."
+                    android:textSize="13sp"
+                    android:textColor="#334155"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
